@@ -4,16 +4,11 @@ const scores = {
     controller: ["QuizService", function(QuizService) {
         const vm = this;
 
-        vm.getScores = function() {
+        vm.$onInit.getScores = function() {
             QuizService.getScores().then(function(response) {
                 vm.scoreList = response.data;
             });
         };
-        // vm.addScores = function(name, score) {
-        //     QuizService.addScores(name, score).then(function(response) {
-        //         vm.scoreList = response.data;
-        //     });
-        // };
     }]
 };
 

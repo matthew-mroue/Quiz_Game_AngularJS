@@ -7,7 +7,5 @@
             <p>{{question.choice_four}}<input ng-click="$ctrl.getVal(question.choice_four, question.answer, $index)" type="radio" name="choice" value="{{question.choice_four}}"></p>
     </form>
 </section>
-<form ng-submit="$ctrl.addScores($ctrl.name, $ctrl.total)">
-    <input ng-model="name" type="text" placeholder="Enter your name">
-    <button>Submit your answers</button>
-</form>
+        <input ng-model="$ctrl.player_name" type="text" placeholder="Enter your name">
+        <button ng-click="$ctrl.tallyScores()">Submit your answers</button>

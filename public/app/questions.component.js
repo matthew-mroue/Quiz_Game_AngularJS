@@ -13,7 +13,6 @@ const questions = {
             console.log(vm.questions);
         });
         vm.total = 0;
-        vm.name = "";
         vm.score = [false, false, false, false, false]
         vm.getVal = function( val, ans, idx ) {
             console.log(`${val} ${ans} ${idx}`);
@@ -24,16 +23,13 @@ const questions = {
             }
             console.log(vm.score)
         };
-        vm.addScores = function(name, total) {
+        vm.tallyScores = function() {
             for (let i = 0; i <=vm.score.length; i++) {
                 if (i == true);
                 vm.total++;
             };
-            QuizService.addScores(name, total).then(function(response) {
+            QuizService.addScores(vm.player_name, vm.total).then(function(response) {
                 vm.scoreList = response.data;
-                console.log(vm.scoreList);
-                console.log(vm.total);
-                console.log(vm.name);
             });
         }
     }]
