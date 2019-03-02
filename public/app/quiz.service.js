@@ -2,10 +2,11 @@
 function QuizService($http) {
     const self = this;
 
-    self.addScores = function(name, score) {
+    self.addScores = function(name, total) {
         return $http({
             method: "POST",
-            url: "/scores"
+            url: "/scores",
+            data: {name,total}
         });
     };
 

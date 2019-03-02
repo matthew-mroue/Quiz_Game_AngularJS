@@ -5,6 +5,9 @@
             <p>{{question.choice_two}}<input ng-click="$ctrl.getVal(question.choice_two, question.answer, $index)" type="radio" name="choice" value="{{question.choice_two}}"></p>
             <p>{{question.choice_three}}<input ng-click="$ctrl.getVal(question.choice_three, question.answer, $index)" type="radio" name="choice" value="{{question.choice_three}}"></p>
             <p>{{question.choice_four}}<input ng-click="$ctrl.getVal(question.choice_four, question.answer, $index)" type="radio" name="choice" value="{{question.choice_four}}"></p>
-        <button ng-click="$ctrl.getTotal();">SUBMIT</button>
     </form>
 </section>
+<form ng-submit="$ctrl.addScores($ctrl.name, $ctrl.total)">
+    <input ng-model="name" type="text" placeholder="Enter your name">
+    <button>Submit your answers</button>
+</form>

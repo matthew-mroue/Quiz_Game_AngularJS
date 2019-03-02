@@ -9,17 +9,11 @@ const questions = {
 
         QuizService.getQuestions().then(response => {
             vm.questions = response.data;
-            // vm.questions = ["und", "und", "und", "und", "und"];
-
-            // console.log(vm.question);
-
-            // for(let i = 0; i < vm.questions.length; i++){
-            //     vm.questions[i] = vm.question[Math.floor(Math.random()*5)];
-            // }
 
             console.log(vm.questions);
         });
         vm.total = 0;
+        vm.name = "";
         vm.score = [false, false, false, false, false]
         vm.getVal = function( val, ans, idx ) {
             console.log(`${val} ${ans} ${idx}`);
@@ -30,13 +24,18 @@ const questions = {
             }
             console.log(vm.score)
         };
-        vm.getScore = function() {
+        vm.addScores = function(name, total) {
             for (let i = 0; i <=vm.score.length; i++) {
                 if (i == true);
                 vm.total++;
             };
-        };
-        
+            QuizService.addScores(name, total).then(function(response) {
+                vm.scoreList = response.data;
+                console.log(vm.scoreList);
+                console.log(vm.total);
+                console.log(vm.name);
+            });
+        }
     }]
 };
 
