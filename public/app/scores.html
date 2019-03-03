@@ -1,4 +1,7 @@
-<section ng-repeat="score in $ctrl.scores track by $index">
-    <p ng-model="score.player_name">{{score.player_name}}</p>
-    <p ng-model="score.score">{{score.score}}</p>
+<h4>SCORES</h4>
+<section class="scorewrapper">
+    <section class="scoretile" ng-repeat="score in $ctrl.scoreList track by $index">
+        <p>Name: {{score.player_name}}</p>
+        <p>Score: {{score.score}}</p>
+    </section>
 </section>

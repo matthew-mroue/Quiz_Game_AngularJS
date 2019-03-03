@@ -18,19 +18,23 @@ const questions = {
             console.log(`${val} ${ans} ${idx}`);
             if (val == ans) {
                 vm.score[idx] = true;
+                vm.total++
             } else {
                 vm.score[idx] = false;
+
             }
             console.log(vm.score)
         };
         vm.tallyScores = function() {
             for (let i = 0; i <=vm.score.length; i++) {
-                if (i == true);
-                vm.total++;
-            };
+                if (vm.score[i] == true);
+            }
             QuizService.addScores(vm.player_name, vm.total).then(function(response) {
                 vm.scoreList = response.data;
             });
+        };
+        vm.checkResults = function() {
+            QuizService.checkResults(); 
         }
     }]
 };

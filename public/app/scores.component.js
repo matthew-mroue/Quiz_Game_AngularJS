@@ -3,12 +3,12 @@ const scores = {
     templateUrl:"app/scores.html",
     controller: ["QuizService", function(QuizService) {
         const vm = this;
-
-        vm.$onInit.getScores = function() {
-            QuizService.getScores().then(function(response) {
+            
+            // vm.$onInit = () => {
+                QuizService.getScores().then(function(response) {
                 vm.scoreList = response.data;
             });
-        };
+        // };
     }]
 };
 

@@ -1,3 +1,65 @@
-.answer {
-    background-color: green;
+body {
+    background: linear-gradient(to right bottom, rgb(24, 255, 128), rgb(0, 148, 25));
+    height: 100vh;
+}
+a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+a:hover {
+    color: #FFFFFF;
+}
+.inputwrapper {
+    margin-left:4px;
+    margin-bottom: 2px;
+}
+.questionwrapper {
+    display: flex;
+}
+h4 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: black;
+    font-size: 36px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+button {
+    border: none;
+    cursor: pointer;
+    padding: 2px 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    margin-left: 2px;
+    margin-right:2px;
+}
+button:hover {
+    box-shadow: 0px 0px 3px 0px black;
+}
+.scorewrapper {
+    display: flex;
+    height: 100%;
+    flex-flow: wrap;
+}
+.scoretile {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 5px;
+    height: max-content;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.questiontile {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 5px;
+    width: 25%;
+}
+.scoretile p, .questiontile p {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
 }
