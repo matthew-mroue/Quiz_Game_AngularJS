@@ -1,5 +1,5 @@
 "use strict";
-function QuizService( $location,$http) {
+function QuizService($location,$http) {
     const self = this;
 
     self.addScores = function(player_name, total) {       
