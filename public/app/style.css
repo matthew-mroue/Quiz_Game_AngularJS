@@ -26,6 +26,13 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
+i {
+    margin-left: 5px;
+    color: #FFFFFF;
+}
+form p:nth-child(1) {
+    font-weight: bold;
+}
 button {
     border: none;
     cursor: pointer;
@@ -41,7 +48,6 @@ button:hover {
 }
 .scorewrapper {
     display: flex;
-    height: 100%;
     flex-flow: wrap;
 }
 .scoretile {
