@@ -8,10 +8,10 @@
     <section  class="questionwrapper">
         <form class="questiontile" ng-repeat="question in $ctrl.questions track by $index">
         <p>{{question.question}}</p>
-                <p>{{question.choice_one}}<input ng-click="$ctrl.getVal(question.choice_one, question.answer, $index)" type="radio" name="choice" value="{{question.choice_one}}"></p>
-                <p>{{question.choice_two}}<input ng-click="$ctrl.getVal(question.choice_two, question.answer, $index)" type="radio" name="choice" value="{{question.choice_two}}"></p>
-                <p>{{question.choice_three}}<input ng-click="$ctrl.getVal(question.choice_three, question.answer, $index)" type="radio" name="choice" value="{{question.choice_three}}"></p>
-                <p>{{question.choice_four}}<input ng-click="$ctrl.getVal(question.choice_four, question.answer, $index)" type="radio" name="choice" value="{{question.choice_four}}"></p>
+                <p>{{question.choice_one}}<input ng-click="$ctrl.getVal(question.choice_one, question.answer, $index)" class="radio" type="radio" name="choice" value="{{question.choice_one}}"></p>
+                <p>{{question.choice_two}}<input ng-click="$ctrl.getVal(question.choice_two, question.answer, $index)" class="radio" type="radio" name="choice" value="{{question.choice_two}}"></p>
+                <p>{{question.choice_three}}<input ng-click="$ctrl.getVal(question.choice_three, question.answer, $index)" class="radio" type="radio" name="choice" value="{{question.choice_three}}"></p>
+                <p>{{question.choice_four}}<input ng-click="$ctrl.getVal(question.choice_four, question.answer, $index)" class="radio" type="radio" name="choice" value="{{question.choice_four}}"></p>
         </form>
     </section>
 </section>

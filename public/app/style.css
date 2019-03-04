@@ -5,7 +5,7 @@ body {
 a {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     color: black;
 }
 a:hover {
@@ -31,20 +31,56 @@ i {
     color: #FFFFFF;
 }
 form p:nth-child(1) {
-    font-weight: bold;
+    font-weight: 800;
 }
 button {
     border: none;
     cursor: pointer;
     padding: 2px 3px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     background-color: #FFFFFF;
     margin-left: 2px;
     margin-right:2px;
 }
 button:hover {
     box-shadow: 0px 0px 3px 0px black;
+}
+.radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    outline: none;
+}
+.radio:checked::before
+{
+     position: absolute;
+     font: 'Open Sans', sans-serif;
+     font-size: 12px;
+     color: #FFFFFF;
+     left: 6px;
+     top: 2px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+.radio:hover
+{
+     background-color: #f7f7f7;
+}
+.radio:checked
+{
+     background: linear-gradient(to right bottom, rgb(24, 255, 128), rgb(0, 182, 91));
 }
 .scorewrapper {
     display: flex;
@@ -67,5 +103,6 @@ button:hover {
 }
 .scoretile p, .questiontile p {
     color: black;
+    font-weight: 600;
     font-family: 'Open Sans', sans-serif;
 }

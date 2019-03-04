@@ -27,6 +27,7 @@ const questions = {
         vm.tallyScores = function() {
             QuizService.addScores(vm.player_name, vm.total).then(function(response) {
                 vm.scoreList = response.data;
+                //add button coloring functionality here
             });
         };
         vm.checkResults = function() {
