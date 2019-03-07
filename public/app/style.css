@@ -46,6 +46,7 @@ button {
 button:hover {
     box-shadow: 0px 0px 3px 0px black;
 }
+
 .radio {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -63,25 +64,103 @@ button:hover {
     margin-right: 7px;
     outline: none;
 }
-.radio:checked::before
-{
+.radio:checked::before {
      position: absolute;
      font: 'Open Sans', sans-serif;
      font-size: 12px;
+     font-weight: bold;
+     color: #FFFFFF;
+     left: 4px;
+     top: 2px;
+     content: '\2605';
+}
+.radio:hover {
+     background-color: #f7f7f7;
+}
+.radio:checked {
+    background: linear-gradient(to right bottom, rgb(253, 253, 253), rgb(177, 177, 177));
+}
+.right {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    outline: none;
+}
+.right:checked::before {
+     position: absolute;
+     font: 'Open Sans', sans-serif;
+     font-size: 12px;
+     font-weight: bold;
      color: #FFFFFF;
      left: 6px;
      top: 2px;
      content: '\02143';
      transform: rotate(40deg);
 }
-.radio:hover
-{
+.right:hover {
      background-color: #f7f7f7;
 }
-.radio:checked
-{
-     background: linear-gradient(to right bottom, rgb(24, 255, 128), rgb(0, 182, 91));
+.right:checked {
+    background: linear-gradient(to right bottom, rgb(24, 255, 128), rgb(0, 182, 91));
 }
+.wrong {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    outline: none;
+}
+.wrong:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    outline: none;
+    background: linear-gradient(to right bottom, rgb(255, 24, 24), rgb(196, 33, 33));
+    
+}
+.wrong:checked::before {
+    position: absolute;
+    font: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    left: 6px;
+    top: 3px;
+    content: '\03a7';
+}
+
 .scorewrapper {
     display: flex;
     flex-flow: wrap;

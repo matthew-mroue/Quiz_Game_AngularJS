@@ -12,6 +12,7 @@ const questions = {
 
             console.log(vm.questions);
         });
+        vm.className = ["radio", "radio", "radio", "radio", "radio"];
         vm.total = 0;
         vm.score = [false, false, false, false, false]
         vm.getVal = function( val, ans, idx ) {
@@ -23,12 +24,25 @@ const questions = {
                 vm.score[idx] = false;
             }
             console.log(vm.score)
+            return vm.score;
         };
         vm.tallyScores = function() {
             QuizService.addScores(vm.player_name, vm.total).then(function(response) {
                 vm.scoreList = response.data;
                 //add button coloring functionality here
+                console.log(vm.scoreList);
             });
+            for (let i = 0; i <= vm.score.length; i++) {
+                if (vm.score[i] === false) {
+                    // vm.className != "radio";
+                   vm.className[i] = "wrong";
+                }
+                else if (vm.score[i] === true){
+                    // vm.className != "radio";
+                   vm.className[i] = "right";
+                }
+                console.log(vm.className);
+            }
         };
         vm.checkResults = function() {
             QuizService.checkResults(); 

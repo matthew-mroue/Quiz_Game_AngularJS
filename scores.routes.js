@@ -14,7 +14,7 @@ scores.post("/scores", function(req, res) {
     [req.body.player_name, req.body.score]).then(function() {
         pool.query("SELECT * FROM scores").then(function(response) {
             res.send(response.rows)
-        });
+        }); 
     });
 });
 
